@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Suggestie App</title>
+    <!-- BELANGRIJK: Link naar het *uitvoer* CSS-bestand -->
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- JOUW FONT AWESOME KIT CODE HIER -->
+   <script src="https://kit.fontawesome.com/2a0d4347be.js" crossorigin="anonymous"></script>
+    <!-- EINDE FONT AWESOME KIT CODE -->
+
+</head>
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-3xl font-bold text-blue-600 text-center mb-6">
+        Welke game ga jij spelen?
+    </h1>
+
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
+
+        <!-- === Genres Sectie === -->
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Kies je favoriete genres:</h2>
+        <div class="flex flex-wrap gap-4 justify-center mb-6">
+
+            <!-- Voorbeeld: Action icoon -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Action">
+                <i class="fa-solid fa-bomb text-3xl text-red-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Action</span>
+            </div>
+
+            <!-- Voorbeeld: RPG icoon -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="RPG">
+                <i class="fa-solid fa-book-skull text-3xl text-purple-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">RPG</span>
+            </div>
+
+            <!-- Voeg hier op dezelfde manier de andere genre-iconen toe (Strategy, Puzzle, etc.) -->
+            <!-- Strategy -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Strategy">
+                <i class="fa-solid fa-chess-knight text-3xl text-gray-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Strategy</span>
+            </div>
+            <!-- Puzzle -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Puzzle">
+                <i class="fa-solid fa-puzzle-piece text-3xl text-yellow-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Puzzle</span>
+            </div>
+             <!-- Simulation -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Simulation">
+                <i class="fa-solid fa-gear text-3xl text-cyan-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Simulation</span>
+            </div>
+             <!-- Sports -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Sports">
+                <i class="fa-solid fa-futbol text-3xl text-green-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Sports</span>
+            </div>
+             <!-- Racing -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Racing">
+                <i class="fa-solid fa-flag-checkered text-3xl text-black mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Racing</span>
+            </div>
+             <!-- Adventure -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Adventure">
+                <i class="fa-solid fa-compass text-3xl text-orange-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Adventure</span>
+            </div>
+             <!-- Horror -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Horror">
+                <i class="fa-solid fa-ghost text-3xl text-indigo-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Horror</span>
+            </div>
+             <!-- Shooter -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Shooter">
+                <i class="fa-solid fa-crosshairs text-3xl text-red-800 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Shooter</span>
+            </div>
+
+
+        </div>
+
+        <!-- === Platforms Sectie === -->
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Waar speel je op?</h2>
+        <div class="flex flex-wrap gap-4 justify-center">
+
+             <!-- PC -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="PC">
+                <i class="fa-solid fa-desktop text-3xl text-gray-700 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">PC</span>
+            </div>
+             <!-- PlayStation -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="PlayStation">
+                <i class="fa-brands fa-playstation text-3xl text-blue-700 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">PlayStation</span>
+            </div>
+             <!-- Xbox -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Xbox">
+                <i class="fa-brands fa-xbox text-3xl text-green-500 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Xbox</span>
+            </div>
+             <!-- Switch -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Nintendo Switch">
+                <i class="fa-solid fa-gamepad text-3xl text-red-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Switch</span>
+            </div>
+             <!-- Mobile -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Mobile">
+                <i class="fa-solid fa-mobile-screen-button text-3xl text-gray-500 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Mobile</span>
+            </div>
+
+             <!-- Voeg hier op dezelfde manier de andere platform-iconen toe -->
+
+        </div>
+
+         <!-- === Knop om suggesties te vragen (komt later) === -->
+         <div class="text-center mt-8">
+             <button id="get-suggestions-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                 Vind mijn game!
+             </button>
+         </div>
+
+
+    </div>
+    </div>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
