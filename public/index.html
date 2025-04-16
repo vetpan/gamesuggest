@@ -1,89 +1,131 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Suggestie App</title>
+    <!-- BELANGRIJK: Link naar het *uitvoer* CSS-bestand -->
+    <link href="./output.css" rel="stylesheet">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.6.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.6.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.6.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- JOUW FONT AWESOME KIT CODE HIER -->
+   <script src="https://kit.fontawesome.com/2a0d4347be.js" crossorigin="anonymous"></script>
+    <!-- EINDE FONT AWESOME KIT CODE -->
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-3xl font-bold text-blue-600 text-center mb-6">
+        Welke game ga jij spelen?
+    </h1>
+
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
+
+        <!-- === Genres Sectie === -->
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Kies je favoriete genres:</h2>
+        <div class="flex flex-wrap gap-4 justify-center mb-6">
+
+            <!-- Voorbeeld: Action icoon -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Action">
+                <i class="fa-solid fa-bomb text-3xl text-red-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Action</span>
+            </div>
+
+            <!-- Voorbeeld: RPG icoon -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="RPG">
+                <i class="fa-solid fa-book-skull text-3xl text-purple-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">RPG</span>
+            </div>
+
+            <!-- Voeg hier op dezelfde manier de andere genre-iconen toe (Strategy, Puzzle, etc.) -->
+            <!-- Strategy -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Strategy">
+                <i class="fa-solid fa-chess-knight text-3xl text-gray-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Strategy</span>
+            </div>
+            <!-- Puzzle -->
+            <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Puzzle">
+                <i class="fa-solid fa-puzzle-piece text-3xl text-yellow-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Puzzle</span>
+            </div>
+             <!-- Simulation -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Simulation">
+                <i class="fa-solid fa-gear text-3xl text-cyan-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Simulation</span>
+            </div>
+             <!-- Sports -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Sports">
+                <i class="fa-solid fa-futbol text-3xl text-green-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Sports</span>
+            </div>
+             <!-- Racing -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Racing">
+                <i class="fa-solid fa-flag-checkered text-3xl text-black mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Racing</span>
+            </div>
+             <!-- Adventure -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Adventure">
+                <i class="fa-solid fa-compass text-3xl text-orange-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Adventure</span>
+            </div>
+             <!-- Horror -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Horror">
+                <i class="fa-solid fa-ghost text-3xl text-indigo-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Horror</span>
+            </div>
+             <!-- Shooter -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="genre" data-value="Shooter">
+                <i class="fa-solid fa-crosshairs text-3xl text-red-800 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Shooter</span>
+            </div>
+
+
+        </div>
+
+        <!-- === Platforms Sectie === -->
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Waar speel je op?</h2>
+        <div class="flex flex-wrap gap-4 justify-center">
+
+             <!-- PC -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="PC">
+                <i class="fa-solid fa-desktop text-3xl text-gray-700 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">PC</span>
+            </div>
+             <!-- PlayStation -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="PlayStation">
+                <i class="fa-brands fa-playstation text-3xl text-blue-700 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">PlayStation</span>
+            </div>
+             <!-- Xbox -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Xbox">
+                <i class="fa-brands fa-xbox text-3xl text-green-500 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Xbox</span>
+            </div>
+             <!-- Switch -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Nintendo Switch">
+                <i class="fa-solid fa-gamepad text-3xl text-red-600 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Switch</span>
+            </div>
+             <!-- Mobile -->
+             <div class="icon-choice text-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-100 hover:border-blue-400 transition-colors" data-category="platform" data-value="Mobile">
+                <i class="fa-solid fa-mobile-screen-button text-3xl text-gray-500 mb-1"></i>
+                <span class="block text-sm font-medium text-gray-700">Mobile</span>
+            </div>
+
+             <!-- Voeg hier op dezelfde manier de andere platform-iconen toe -->
+
+        </div>
+
+         <!-- === Knop om suggesties te vragen (komt later) === -->
+         <div class="text-center mt-8">
+             <button id="get-suggestions-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                 Vind mijn game!
+             </button>
+         </div>
+
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    </div>
+<script type="module" src="./script.js"></script>
+</body>
 </html>
