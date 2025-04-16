@@ -1,12 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Styling voor geselecteerde iconen */
 .icon-choice.selected {
-    @apply bg-blue-200 border-blue-500 ring-2 ring-blue-300;
+  @apply border-blue-500 bg-blue-100 ring-2 ring-blue-300; /* Blauwe rand, lichte achtergrond, ring */
 }
 
 /* Optioneel: Iets andere hover als al geselecteerd */
 .icon-choice.selected:hover {
-   @apply bg-blue-300;
+  @apply bg-blue-300; /* Iets donkerder bij hoveren over selectie */
 }
+
+/* Je kunt hieronder eventuele andere eigen CSS-regels toevoegen */
